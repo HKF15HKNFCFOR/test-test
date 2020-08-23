@@ -3,6 +3,6 @@ let xhr = new XHR();
 
 xhr.open('GET', 'https://cors-anywhere.herokuapp.com/https://google.com', true); 
 
-xhr.onload = function() {alert( 'Успешно! '); }
+xhr.onload = function() {document.getElementById(body).innerHTML=xhr.responseText; }
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ); } 
 xhr.send();
