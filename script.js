@@ -1,14 +1,6 @@
 function log(message) {
-  console.log(message);
-  var logArea = document.getElementById('log');
-  console.log(logArea);
-  logArea.innerText = logArea.innerText + message;
+  let logArea = document.getElementById('log');
+  logArea.innerHTML = logArea.innerHTML + message;
 }
+log('Something');
 
-function start() {
-  console.log('starting...');
-  log('Something');
-  console.log('... finished');
-}
-
-start();
