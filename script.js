@@ -1,5 +1,5 @@
 $.ajax({
-	url: '/index.php',
+	url: 'https://google.com',
 	method: 'get',
 	dataType: 'json',
 	success: function(data){
