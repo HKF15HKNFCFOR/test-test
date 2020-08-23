@@ -1,12 +1,14 @@
-$("#form").on("submit", function(){
-	$.ajax({
-		url: '/handler.php',
-		method: 'post',
-		dataType: 'html',
-		data: $(this).serialize(),
-		success: function(data){
-			$('#message').html(data);
-		}
-	});
+var text = '';
+ 
+$.ajax({
+	url: 'https://google.com',
+	method: 'get',
+	dataType: 'html',
+	async: false,
+	success: function(data){
+		text = data;
+	}
 });
-alert('ok')
+ 
+alert(text);
+alert('df')
