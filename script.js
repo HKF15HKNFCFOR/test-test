@@ -4,3 +4,4 @@ function log(message) {
 }
 log('Something');
 
+alert('ok')
