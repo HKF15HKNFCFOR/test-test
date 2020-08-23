@@ -1,25 +1,10 @@
-$.ajax({
-	url: 'https://google.com',
-	method: 'get',
-	dataType: 'json',
-	success: function(data){
-		alert(data);
-	},
-	error: function (jqXHR, exception) {
-		if (jqXHR.status === 0) {
-			alert('Not connect. Verify Network.');
-		} else if (jqXHR.status == 404) {
-			alert('Requested page not found (404).');
-		} else if (jqXHR.status == 500) {
-			alert('Internal Server Error (500).');
-		} else if (exception === 'parsererror') {
-			alert('Requested JSON parse failed.');
-		} else if (exception === 'timeout') {
-			alert('Time out error.');
-		} else if (exception === 'abort') {
-			alert('Ajax request aborted.');
-		} else {
-			alert('Uncaught Error. ' + jqXHR.responseText);
-		}
-	}
-});
+let XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest; 
+let xhr = new XHR();
+xhr.open('GET', 'https://google.com', true); 
+xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+xhr.setRequestHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+xhr.setRequestHeader('Access-Control-Allow-Headers', 'X-PINGOTHER, Content-Type');
+xhr.setRequestHeader('Access-Control-Max-Age', '86400');
+xhr.onload = function() {alert( 'Успешно! '); }
+xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ); } 
+xhr.send();
