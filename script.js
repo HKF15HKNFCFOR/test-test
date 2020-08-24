@@ -11,10 +11,9 @@ xhr.open('GET', 'https://cors-anywhere.herokuapp.com/http://www.'+value, true);
  alert('https://cors-anywhere.herokuapp.com/http://www.'+value)
 xhr.onprogress = function() { document.getElementById('textout'+id).innerHTML="Статус: загрузка..." }
 xhr.onload = function() {
-hyptext.append(xhr.response)
-  alert(hyptext[0])
+hyptext.push(xhr.response)
 document.getElementById('textout'+id).innerHTML="Статус: загружено!"
-document.getElementById('textout'+id).innerHTML+='<input type="button" value="Перейти!" onclick="opend(hyptext[0])" />'
+document.getElementById('textout'+id).innerHTML+='<input type="button" value="Перейти!" onclick="opend(hyptext['+id+'])" />'
 }
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ) } 
 xhr.send();
