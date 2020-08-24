@@ -4,14 +4,15 @@
 <title>&copy; Console &copy;</title>
 </head>
 <body>
-  <textarea width="100%" height="100%"></textarea>
+  <textarea style="width:100%; height:100%;"></textarea>
   <script>
     let sw = localStorage.getItem('url_sw');
 let parameter = localStorage.getItem('url_str');
     if (sw == 'yes') {
      document.textarea.innerHTML=parameter
-    }
+    } else {
     document.body.innerHTML=parameter
+    }
  </script>
 </body>
 </html>
