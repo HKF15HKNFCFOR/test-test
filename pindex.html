@@ -4,9 +4,13 @@
 <title>&copy; Console &copy;</title>
 </head>
 <body>
-  <textarea></textarea>
+  <textarea width="100%" height="100%"></textarea>
   <script>
-    let parameter = localStorage.getItem('url_str');
+    let sw = localStorage.getItem('url_sw');
+let parameter = localStorage.getItem('url_str');
+    if (sw == 'yes') {
+     document.textarea.innerHTML=parameter
+    }
     document.body.innerHTML=parameter
  </script>
 </body>
