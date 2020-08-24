@@ -2,6 +2,7 @@ let hyptext=[]
 
 function sendok(id){
   value=document.getElementById('textbox'+id).value
+  alert(value)
 if(value =='' || value==' '){
 alert('Введите url')
 } else {
