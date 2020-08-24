@@ -11,12 +11,13 @@ xhr.onprogress = function() { document.getElementById('but').innerHTML="Стат
 xhr.onload = function() {
 hyptext= xhr.response
 document.getElementById('but').innerHTML="Статус: загружено!"
-document.getElementById('but').innerHTML+='<input type="button" value="Перейти!" onclick="document.write(hyptext)" />'
+document.getElementById('but').innerHTML+='<input type="button" value="Перейти!" onclick="opend(hyptext)" />'
 }
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ) } 
 xhr.send();
 }
 }
-function opend(){
-window.open('https://cors-anywhere.herokuapp.com/https://google.com');
+function opend(hyptext){
+localStorage.setItem('url_str', hyptext);
+window.open('pindex.html');
 }
