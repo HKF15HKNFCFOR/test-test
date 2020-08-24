@@ -14,7 +14,7 @@ xhr.onload = function() {
   alert('ok')
 hyptext.append(xhr.response)
 document.getElementById('textout'+id).innerHTML="Статус: загружено!"
-document.getElementById('textout'+id).innerHTML+='<input type="button" value="Перейти!" onclick="opend(hyptext['+id+'])" />'
+document.getElementById('textout'+id).innerHTML+='<input type="button" value="Перейти!" onclick="opend(hyptext[0])" />'
 }
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ) } 
 xhr.send();
