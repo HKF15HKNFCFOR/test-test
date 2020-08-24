@@ -23,7 +23,10 @@ xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}
 xhr.send();
 }
 }
-function opend(val){
+function opend(val, sw=null){
+  if(sw!=null){
+localStorage.setItem('url_sw', sw);
+  }
 localStorage.setItem('url_str', val);
 window.open('pindex.html');
 }
