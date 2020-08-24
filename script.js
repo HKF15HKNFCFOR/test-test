@@ -24,7 +24,6 @@ xhr.send();
 }
 }
 function opend(val, sw=null){
-  alert(sw)
 localStorage.setItem('url_sw', sw);
 localStorage.setItem('url_str', val);
 window.open('pindex.html');
