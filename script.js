@@ -8,7 +8,6 @@ alert('Введите url')
 let XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest; 
 let xhr = new XHR();
 xhr.open('GET', 'https://cors-anywhere.herokuapp.com/http://www.'+value, true); 
- alert('https://cors-anywhere.herokuapp.com/http://www.'+value)
 xhr.onprogress = function() { document.getElementById('textout'+id).innerHTML="Статус: загрузка..." }
 xhr.onload = function() {
 hyptext.push(xhr.response)
