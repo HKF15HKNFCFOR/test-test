@@ -2,8 +2,8 @@ let XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 let xhr = new XHR();
 let hyptext=''
 
-function sendok(){
-xhr.open('GET', 'https://cors-anywhere.herokuapp.com/https://google.com', true); 
+function sendok(value){
+xhr.open('GET', 'https://cors-anywhere.herokuapp.com/http://www.'+value, true); 
 xhr.onprogress = function() { document.getElementById('but').innerHTML="Статус: загрузка..." }
 xhr.onload = function() {
 hyptext= xhr.response
