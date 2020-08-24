@@ -7,7 +7,7 @@ xhr.onprogress = function(event) {
 }
 xhr.onload = function() {
  document.getElementById('but').value="Загружено!"
- document.write(xhr.response) }
+  }
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ) } 
 xhr.send();
 
