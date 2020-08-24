@@ -3,12 +3,11 @@
 <head>  
 <title>Страница HTML</title>
   <script>
-    alert('ok')
     let parameter = localStorage.getItem('url_str');
-    alert(parameter)
+    document.getElementById('out').innerHTML=parameter
  </script>
 </head>
 <body>
-  
+  <div id="out"></div>
 </body>
 </html>
