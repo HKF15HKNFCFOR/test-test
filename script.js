@@ -16,3 +16,6 @@ xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}
 xhr.send();
 
 }
+function opend(){
+window.open('https://cors-anywhere.herokuapp.com/https://google.com');
+}
