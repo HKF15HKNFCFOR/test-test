@@ -12,6 +12,7 @@ document.getElementById('textout'+id).innerHTML="Статус: началась 
   }
 let XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest; 
 let xhr = new XHR();
+  alert('https://cors-anywhere.herokuapp.com/'+value)
 xhr.open('GET', 'https://cors-anywhere.herokuapp.com/'+value, true); 
 xhr.onprogress = function() { document.getElementById('textout'+id).innerHTML="Статус: загрузка..." }
 xhr.onload = function() {
