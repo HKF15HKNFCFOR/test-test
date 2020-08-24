@@ -3,6 +3,9 @@ let xhr = new XHR();
 let hyptext=''
 
 function sendok(value){
+if(value =='' || value==' '){
+alert('Введите url')
+} else {
 xhr.open('GET', 'https://cors-anywhere.herokuapp.com/http://www.'+value, true); 
 xhr.onprogress = function() { document.getElementById('but').innerHTML="Статус: загрузка..." }
 xhr.onload = function() {
@@ -13,7 +16,7 @@ document.getElementById('but').innerHTML+='<input type="button" value="Пере�
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ) } 
 xhr.send();
 }
-
+}
 function opend(){
 window.open('https://cors-anywhere.herokuapp.com/https://google.com');
 }
