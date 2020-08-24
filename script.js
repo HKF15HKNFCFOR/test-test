@@ -31,3 +31,10 @@ document.getElementById('outing').innerHTML+=`Ваш url:
   <div id="textout`+count+`"></div>`
 count++
 }
+function dell_all(){
+count=1
+let save=hyptext[0]
+hyptext=[]
+hyptext[0]=save
+document.getElementById('outing').innerHTML=''
+}
