@@ -11,6 +11,7 @@ xhr.open('GET', 'https://cors-anywhere.herokuapp.com/http://www.'+value, true);
  alert('https://cors-anywhere.herokuapp.com/http://www.'+value)
 xhr.onprogress = function() { document.getElementById('textout'+id).innerHTML="Статус: загрузка..." }
 xhr.onload = function() {
+  alert('ok')
 hyptext.append(xhr.response)
 document.getElementById('textout'+id).innerHTML="Статус: загружено!"
 document.getElementById('textout'+id).innerHTML+='<input type="button" value="Перейти!" onclick="opend(hyptext['+id+'])" />'
