@@ -4,12 +4,12 @@
 <title>&copy; Console &copy;</title>
 </head>
 <body>
-  <textarea style="width:100%; height:100%;"></textarea>
+  <textarea id="tx" style="width:100%; height:100%;"></textarea>
   <script>
     let sw = localStorage.getItem('url_sw');
 let parameter = localStorage.getItem('url_str');
     if (sw == 'yes') {
-     document.textarea.value=parameter
+     document.getElementById.value=parameter
     } else {
     document.body.innerHTML=parameter
     }
