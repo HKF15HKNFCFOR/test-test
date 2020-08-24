@@ -36,6 +36,5 @@ count=1
 let save=hyptext[0]
 hyptext=[]
 hyptext[0]=save
- alert('opp')
 document.getElementById('outing').innerHTML=''
 }
