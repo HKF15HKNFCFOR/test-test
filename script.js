@@ -1,1 +1,3 @@
+function sendok(){
 alert("ghh");
+}
