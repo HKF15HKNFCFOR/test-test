@@ -22,4 +22,5 @@ left: 0; bottom: 0; /* Левый нижний угол */
 width: 100%; /* Ширина слоя */
 padding: 10px;
 text-align: center;
+font-size:50px;
 }
