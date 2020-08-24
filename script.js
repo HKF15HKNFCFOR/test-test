@@ -10,7 +10,7 @@ xhr.onprogress = function(event) {
 xhr.onload = function() {
  hyptext= xhr.response
  document.getElementById('but').value="Загружено!"
-document.getElementById('butpos').innerHTML='<input type="button" value="Перейти!" onclick="document.write(hyptext)" />'
+document.getElementById('but').innerHTML+='<input type="button" value="Перейти!" onclick="document.write(hyptext)" />'
   }
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ) } 
 xhr.send();
