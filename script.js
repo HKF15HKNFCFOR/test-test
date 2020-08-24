@@ -1,4 +1,5 @@
 
+alert('ko')
 function sendok(){
   alert('ok')
   let XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest; 
