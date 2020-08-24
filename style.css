@@ -9,8 +9,8 @@ input {
 font-size:20px;
 }
 #outing{
-margin-top:10px;
-height: 100%; 
+margin-top:20px;
+height: 500px; 
 border: none;
 overflow-y: scroll;
 }
