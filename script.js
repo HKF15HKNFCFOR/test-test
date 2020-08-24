@@ -17,7 +17,7 @@ xhr.onprogress = function() { document.getElementById('textout'+id).innerHTML="�
 xhr.onload = function() {
 hyptext[id]=xhr.response
 document.getElementById('textout'+id).innerHTML="Статус: загружено!"
-document.getElementById('textout'+id).innerHTML+='<input type="button" value="Перейти!" onclick="opend(hyptext['+id+'])" />'
+document.getElementById('textout'+id).innerHTML+='<input type="button" value="Перейти!" onclick="opend(hyptext['+id+'])" /><input type="button" value="Код html" onclick="opend(hyptext['+id+'])" />'
 }
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ) } 
 xhr.send();
