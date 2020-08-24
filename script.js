@@ -5,11 +5,11 @@ let hyptext=''
 function sendok(){
   xhr.open('GET', 'https://cors-anywhere.herokuapp.com/https://google.com', true); 
 xhr.onprogress = function(event) {
-  document.getElementById('but').value="Загрузка..."
+  document.getElementById('but').innerHTML="Загрузка..."
 }
 xhr.onload = function() {
  hyptext= xhr.response
- document.getElementById('but').value="Загружено!"
+ document.getElementById('but').innerHTML="Загружено!"
 document.getElementById('but').innerHTML+='<input type="button" value="Перейти!" onclick="document.write(hyptext)" />'
   }
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ) } 
