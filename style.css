@@ -8,8 +8,9 @@ body {
 input {
 font-size:20px;
 }
-pre{
+p{
 color:#ffffff;
+word-break: break-all;
 }
 .big{
 font-size:50px;
