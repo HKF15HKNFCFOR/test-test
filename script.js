@@ -12,19 +12,19 @@ document.getElementById('textout'+id).innerHTML="Статус: началась 
   }
 let XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest; 
 let xhr = new XHR();
-  alert('https://cors-anywhere.herokuapp.com/'+value)
 xhr.open('GET', 'https://cors-anywhere.herokuapp.com/'+value, true); 
 xhr.onprogress = function() { document.getElementById('textout'+id).innerHTML="Статус: загрузка..." }
 xhr.onload = function() {
 hyptext[id]=xhr.response
 document.getElementById('textout'+id).innerHTML="Статус: загружено!"
-document.getElementById('textout'+id).innerHTML+='<input type="button" value="Перейти!" onclick="opend(hyptext['+id+'])" /><input type="button" value="Код html" onclick="opend(hyptext['+id+'],yes)" />'
+document.getElementById('textout'+id).innerHTML+='<input type="button" value="Перейти!" onclick="opend(hyptext['+id+'])" /><input type="button" value="Код html" onclick="opend(hyptext['+id+'],\'yes\')" />'
 }
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ) } 
 xhr.send();
 }
 }
 function opend(val, sw=null){
+  alert(sw)
   if(sw!=null){
 localStorage.setItem('url_sw', sw);
   }
