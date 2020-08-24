@@ -8,6 +8,9 @@ body {
 input {
 font-size:20px;
 }
+.big{
+font-size:50px;
+}
 #outing{
 margin-top:20px;
 height: 300px; 
@@ -22,5 +25,4 @@ left: 0; top: 0; /* Левый нижний угол */
 width: 100%; /* Ширина слоя */
 padding: 10px;
 text-align: center;
-font-size:50px;
 }
