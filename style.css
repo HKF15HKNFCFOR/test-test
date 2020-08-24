@@ -8,6 +8,9 @@ body {
 input {
 font-size:20px;
 }
+pre{
+color:#ffffff;
+}
 .big{
 font-size:50px;
 }
