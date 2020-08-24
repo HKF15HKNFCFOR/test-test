@@ -3,9 +3,11 @@ function sendok(){
 let xhr = new XHR();
   xhr.open('GET', 'https://cors-anywhere.herokuapp.com/https://google.com', true); 
 xhr.onprogress = function(event) {
-  alert( 'Получено с сервера ' + event.loaded + ' байт из ' + event.total );
+  document.getElementById('but').value="Загрузка..."
 }
-xhr.onload = function() {document.write(xhr.response) }
+xhr.onload = function() {
+ document.getElementById('but').value="Загружено!"
+ document.write(xhr.response) }
 xhr.onerror = function() { alert( `Ошибка ${xhr.status}: ${xhr.statusText}` ) } 
 xhr.send();
 
