@@ -6,9 +6,13 @@ if(value =='' || value==' '){
 alert('Введите url')
 } else {
 document.getElementById('textout'+id).innerHTML="Статус: началась загрузка"
+ 
+  if (value.match(/(http(s)?:)/g)==null){
+  value='http://'+value
+  }
 let XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest; 
 let xhr = new XHR();
-xhr.open('GET', 'https://cors-anywhere.herokuapp.com/https://'+value, true); 
+xhr.open('GET', 'https://cors-anywhere.herokuapp.com/'+value, true); 
 xhr.onprogress = function() { document.getElementById('textout'+id).innerHTML="Статус: загрузка..." }
 xhr.onload = function() {
 hyptext[id]=xhr.response
