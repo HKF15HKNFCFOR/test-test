@@ -23,3 +23,11 @@ function opend(val){
 localStorage.setItem('url_str', val);
 window.open('pindex.html');
 }
+let count=1
+function add(){
+document.body.innerHTML+=`Ваш url:
+<input type="text" id="textbox`+count+`" />
+<input type="button" value="Загрузить url" onclick="window.sendok(`+count+`);" />
+  <div id="textout`+count+`"></div>`
+count++
+}
