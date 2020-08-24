@@ -25,7 +25,7 @@ window.open('pindex.html');
 }
 let count=1
 function add(){
-document.getElementById('outing')innerHTML+=`Ваш url:
+document.getElementById('outing').innerHTML+=`Ваш url:
 <input type="text" id="textbox`+count+`" />
 <input type="button" value="Загрузить url" onclick="window.sendok(`+count+`);" />
   <div id="textout`+count+`"></div>`
